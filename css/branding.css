@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #6366F1;
+    --color-dark: #0B0F19;
+    --color-light: #fff;
+    --color-grey-500: #B4B7C9;
+    --color-grey-800: #33354D;
+
+    --container-padding: 1rem;
+    --transition-time: all 0.2s;
+
+    --primary-hover: #575adf;
+
+}

@@ -1,0 +1,79 @@
+@import url(branding.css);
+@import url(elements/buttons.css);
+@import url(elements/toggle.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    padding-right: var(--container-padding);
+    padding-left: var(--container-padding);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    display: none;
+}
+
+.nav-link {
+    color: var(--color-grey-800);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--primary-hover);
+}
+
+#sign-in {
+    display: none;
+}
+
+header .container {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1.2rem;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    header .container {
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 1000px) { /*1400px*/
+    .container {
+        max-width: 900px; /*1320px*/
+    }
+    header .container {
+        grid-template-columns: auto 1fr auto auto;
+        gap: 3rem;
+    }
+    .navbar {
+        display: block;
+    }
+    #sign-in {
+        display: block;
+    }
+}

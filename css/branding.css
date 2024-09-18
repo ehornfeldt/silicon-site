@@ -7,9 +7,14 @@
     --color-grey-600: #9397AD;
     --color-grey-800: #33354D;
 
+    --text-color-dark: #131022;
+    --text-color-darkgrey: #585C7B;
+
     --container-padding: 1rem;
     --transition-time: all 0.2s;
 
     --primary-hover: #575adf;
+    --dark-hover: #2d2941;
+    --color-border: var(--color-grey-300);
 
 }

@@ -1,14 +1,17 @@
 @import url(../branding.css);
 
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--color-light);
+.btn {
     text-decoration: none;
     border-radius: 8px;
     padding: 12px 25px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--color-light);
+    
 }
 
 .btn-primary:hover {
@@ -23,6 +26,25 @@
     background-color: transparent;
     border: none;
     font-size: 2rem;
+}
+
+.btn-circle {
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.btn-app {
+    background-color: var(--text-color-dark);
+}
+.btn-app:hover {
+    background-color: var(--dark-hover);
 }
 
 @media (min-width: 992px) {

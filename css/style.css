@@ -17,6 +17,12 @@ body {
     font-size: 16px;
 }
 
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
 .container {
     width: 100%;
     padding-right: var(--container-padding);
@@ -52,6 +58,20 @@ header .container {
     padding-bottom: 1rem;
 }
 
+footer {
+    font-size: 14px;
+    color: var(--color-grey-600);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 @media (min-width: 768px) {
     .container {
@@ -59,6 +79,13 @@ header .container {
     }
     header .container {
         gap: 3rem;
+    }
+
+    footer {
+        .container {
+            flex-direction: row;
+            gap: 2px;
+        }
     }
 }
 

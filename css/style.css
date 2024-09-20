@@ -308,6 +308,21 @@ footer {
         }
     }
 
+    #how-does-it-work {
+        .container {
+            .img-mobile {
+                display: none;
+            }
+            .img {
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 30%;
+                }
+            }
+        }
+    }
+
     footer {
         .container {
             flex-direction: row;

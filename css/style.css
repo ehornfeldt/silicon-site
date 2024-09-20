@@ -147,14 +147,19 @@ header .container {
     .container {
         display: grid;
         gap: 3rem;
-        
+        margin-block: 2rem;
+
         #features-mobile-img {
             display: none;
+        }
+        .text-content {
+            display: grid;
+            gap: 3rem;
         }
         .heading {
             text-align: center;
             h1 {
-                margin-block: 2rem;
+                margin-bottom: 2rem;
                 font-size: 28px;
             }
             p {
@@ -166,8 +171,7 @@ header .container {
             gap: 2rem;
         }
         .feature {
-            display: grid;
-            grid-template-columns: auto auto;
+            display: flex;
             gap: 2rem;
             .icon {
                 display: flex;
@@ -175,6 +179,7 @@ header .container {
                 align-items: center;
                 width: 60px;
                 height: 60px;
+                flex-shrink: 0;
                 background-color: var(--color-features-bg);
                 border-radius: 8px;
             }
@@ -270,6 +275,12 @@ footer {
         display: none;
     }
 
+    #app-features {
+        .features {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
     footer {
         .container {
             flex-direction: row;
@@ -320,6 +331,17 @@ footer {
     #brand5 {
         display: flex;
     }
+    #app-features {
+        .container {
+            grid-template-columns: auto auto;
+            /* gap: 5rem; */
+            margin-block: 4rem;
+
+            #features-mobile-img {
+                display: block;
+            }
+        }
+    }
 }
 
 /*Desktop size*/
@@ -356,5 +378,20 @@ footer {
     }
     #brand6 {
         display: flex;
+    }
+
+    #app-features {
+        .container {
+            gap: 10rem;
+            .text-content {
+                display: grid;
+                grid-template-rows: auto 1fr;
+                gap: 6rem;
+            }
+            .features {
+                column-gap: 3rem;
+                row-gap: 1rem;
+            }
+        }
     }
 }

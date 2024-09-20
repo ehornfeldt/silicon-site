@@ -17,6 +17,20 @@ body {
     font-size: 16px;
 }
 
+h1, h5 {
+    font-weight: 800;
+    color: var(--color-grey-900);
+}
+h1 {
+    font-size: 40px;
+}
+h5 {
+    font-size: 20px;
+}
+p {
+    color: var(--text-color-darkgrey);
+}
+
 .wrapper {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -88,7 +102,6 @@ header .container {
         p {
             text-align: center;
             font-size: 18px;
-            color: var(--text-color-darkgrey);
             margin-bottom: 3rem;
         }
         
@@ -126,6 +139,49 @@ header .container {
             right: 0;
             z-index: -5;
             width: 70%;
+        }
+    }
+}
+
+#app-features {
+    .container {
+        display: grid;
+        gap: 3rem;
+        
+        #features-mobile-img {
+            display: none;
+        }
+        .heading {
+            text-align: center;
+            h1 {
+                margin-block: 2rem;
+                font-size: 28px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        .features {
+            display: grid;
+            gap: 2rem;
+        }
+        .feature {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 2rem;
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                background-color: var(--color-features-bg);
+                border-radius: 8px;
+            }
+            h5 {
+                font-size: 20px;
+                color: var(--text-color-dark);
+            }
         }
     }
 }

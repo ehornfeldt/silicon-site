@@ -1,5 +1,12 @@
 @import url(../branding.css);
 
+button {
+    border: none;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+}
+
 .btn {
     text-decoration: none;
     border-radius: 8px;
@@ -45,6 +52,11 @@
 }
 .btn-app:hover {
     background-color: var(--dark-hover);
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
 }
 
 @media (min-width: 992px) {

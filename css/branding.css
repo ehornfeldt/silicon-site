@@ -2,9 +2,11 @@
     --primary-color: #6366F1;
     --color-dark: #0B0F19;
     --color-light: #fff;
+    --color-grey-100: #F3F6FF;
     --color-grey-300: #E2E5F1;
     --color-grey-500: #B4B7C9;
     --color-grey-600: #9397AD;
+    --color-grey-700: #565973;
     --color-grey-800: #33354D;
     --color-grey-900: var(--color-dark);
 

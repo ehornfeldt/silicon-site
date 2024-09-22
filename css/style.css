@@ -204,16 +204,6 @@ header .container {
         .feature {
             display: flex;
             gap: 2rem;
-            /* .icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 60px;
-                height: 60px;
-                flex-shrink: 0;
-                background-color: var(--color-features-bg);
-                border-radius: 8px;
-            } */
             h5 {
                 font-size: 20px;
                 color: var(--text-color-dark);
@@ -245,9 +235,11 @@ header .container {
     }
 
 }
+.desktop-only {
+    display: none;
+}
 
 #desktop-only {
-    display: none;
     .container {
         margin-block: 4rem;
         .transfer, .payments {
@@ -286,6 +278,86 @@ header .container {
         }
         p {
             color: var(--color-grey-700);
+        }
+    }
+}
+
+#reviews {
+    background-color: var(--color-grey-100);
+    padding-block: 4rem;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+
+        .review-content {
+            background-color: var(--color-light);
+            border-radius: 8px;
+            padding: 40px 24px 24px 24px;
+            box-shadow: 2px 2px 5px var(--box-shadow);
+            position: relative;
+
+            .fa-square-quote {
+                color: var(--primary-color);
+                font-size: 44px;
+                position: absolute;
+                top: -30px;
+            }
+
+            .fa-solid.fa-star {
+                color: var(--color-warning);
+            }
+            .fa-light.fa-star {
+                color: var(--color-grey-500);
+            }
+
+            .review {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;  
+                
+                p {
+                    font-size: 18px;
+                    color: var(--color-grey-700);
+                }
+            }
+
+            .author-content {
+                display: flex;
+                gap: 0.5rem;
+                .name {
+                    font-weight: 800;
+                }
+                .role {
+                    color: var(--color-grey-500);
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+#faq {
+    .container {
+        display: grid;
+
+        .headline {
+            .faq-text {
+                font-size: 18px;
+                color: var(--color-grey-700);
+            }
+        }
+        .question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px var(--box-shadow);
+            p {
+                font-weight: 800;
+                color: var(--color-grey-900);
+            }
         }
     }
 }
@@ -442,7 +514,7 @@ footer {
             }
         }
     }
-    #desktop-only {
+    .desktop-only {
         display: block;
     }
 }

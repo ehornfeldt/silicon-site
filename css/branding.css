@@ -13,6 +13,8 @@
     --text-color-dark: #131022;
     --text-color-darkgrey: #585C7B;
 
+    --color-warning: #FFBA08;
+
     --container-padding: 1rem;
     --transition-time: all 0.2s;
 
@@ -20,5 +22,7 @@
     --dark-hover: #2d2941;
     --color-border: var(--color-grey-300);
     --color-features-bg: rgba(99, 102, 241, 0.08);
+
+    --box-shadow: rgb(234, 234, 234);
 
 }

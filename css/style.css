@@ -571,6 +571,13 @@ footer {
         }
     }
 
+    #subscribe {
+        .container {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
     footer {
         .container {
             flex-direction: row;
@@ -684,6 +691,19 @@ footer {
                 }
                 .fa-phone-volume, .fa-comment-dots {
                     font-size: 20px;
+                }
+            }
+        }
+    }
+    #subscribe {
+        .container {
+            padding-inline: 3rem;
+            .headline {
+                .desktop {
+                    display: block;
+                }
+                .mobile {
+                    display: none;
                 }
             }
         }

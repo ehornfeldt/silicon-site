@@ -340,26 +340,20 @@ header .container {
 #faq {
     .container {
         margin-block: 4rem;
-        display: grid;
-        gap: 3rem 4rem;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto 1fr;
-        grid-template-areas: 
-        "headline questions"
-        "contact questions";
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4rem;
         .headline {
-            grid-area: headline;
+            text-align: center;
             display: grid;
-            align-self: start;
-            gap: 3rem;
+            gap: 2rem;
             .faq-text {
                 font-size: 18px;
                 color: var(--color-grey-700);
             }
         }
         .questions {
-            grid-area: questions;
             display: grid;
             gap: 1rem;
         }
@@ -384,39 +378,13 @@ header .container {
             margin-bottom: 1rem;
         }
         .contact {
-            grid-area: contact;
-            display: flex;
-            gap: 1rem;
-            align-self: start;
-            .phone, .chat {
-                border: 1px solid var(--color-grey-300);
-                border-radius: 8px;
-                padding: 24px;
-            }
-            .phone, .chat {
-                display: grid;
-                gap: 1rem;
-                font-size: 14px;
-                a {
-                    display: flex;
-                    gap: 1rem;
-                    align-items: center;
-                }
-            }
-            .phone
-                i, a {
-                    color: var(--primary-color);
-                }
-            }
-            .chat {
-                i, a {
-                    color: var(--color-success); 
-                }
-            }
-            .fa-phone-volume, .fa-comment-dots {
-                font-size: 20px;
-            }
+            display: none;
         }
+        .contact-mobile {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
 
 footer {
@@ -510,6 +478,49 @@ footer {
         }
     }
 
+    #faq {
+        .container {
+            .contact {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                .phone, .chat {
+                    border: 1px solid var(--color-grey-300);
+                    border-radius: 8px;
+                    padding: 24px;
+                }
+                .phone, .chat {
+                    flex: 1;
+                    display: grid;
+                    gap: 1rem;
+                    font-size: 14px;
+                    a {
+                        display: flex;
+                        gap: 1rem;
+                        text-decoration: none;
+                        align-items: center;
+                    }
+                }
+                .phone {
+                    i, a {
+                        color: var(--primary-color);
+                    }
+                }
+                .chat {
+                    i, a {
+                        color: var(--color-success); 
+                    }
+                }
+                .fa-phone-volume, .fa-comment-dots {
+                    font-size: 20px;
+                }
+            }
+            .contact-mobile {
+                display: none;
+            }
+        }
+    }
+
     footer {
         .container {
             flex-direction: row;
@@ -563,7 +574,6 @@ footer {
     #app-features {
         .container {
             grid-template-columns: auto auto;
-            /* gap: 5rem; */
             margin-block: 4rem;
 
             #features-mobile-img {
@@ -573,6 +583,60 @@ footer {
     }
     .desktop-only {
         display: block;
+    }
+    #faq {
+        .container {
+            display: grid;
+            gap: 3rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr;
+            grid-template-areas: 
+            "headline questions"
+            "contact questions";
+    
+            .headline {
+                grid-area: headline;
+                align-self: start;
+                justify-items: start;
+                text-align: left;
+            }
+            .questions {
+                grid-area: questions;
+            }
+            .contact {
+                grid-area: contact;
+                align-self: start;
+                justify-content: flex-start;
+                .phone, .chat {
+                    border: 1px solid var(--color-grey-300);
+                    border-radius: 8px;
+                    padding: 24px;
+                }
+                .phone, .chat {
+                    display: grid;
+                    gap: 1rem;
+                    font-size: 14px;
+                    a {
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+                    }
+                }
+                .phone {
+                    i, a {
+                        color: var(--primary-color);
+                    }
+                }
+                .chat {
+                    i, a {
+                        color: var(--color-success); 
+                    }
+                }
+                .fa-phone-volume, .fa-comment-dots {
+                    font-size: 20px;
+                }
+            }
+        }
     }
 }
 
@@ -623,6 +687,15 @@ footer {
             .features {
                 column-gap: 3rem;
                 row-gap: 1rem;
+            }
+        }
+    }
+    #faq {
+        .container {
+            .contact {
+                .phone, .chat {
+                    flex: none;
+                }
             }
         }
     }

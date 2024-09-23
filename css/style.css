@@ -387,6 +387,56 @@ header .container {
     }
 }
 
+#subscribe {
+    .container {
+        background-color: var(--color-grey-100);
+        border-radius: 8px;
+        padding-block: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .headline {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            h4 {
+                font: 22px;
+            }
+            .desktop {
+                display: none;
+            }
+        }
+        .subscribe-form {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            button {
+                border-radius: 0 8px 8px 0;
+            }
+            input {
+                flex: 1;
+                border: 1px solid var(--form-border);
+                border-right: none;
+                border-radius: 8px 0 0 8px;
+                padding: 1.5rem;
+                padding-left: 2.5rem;
+            }
+            input::placeholder {
+                color: var(--color-grey-500);
+                font-family: "Manrope", sans-serif;
+                font-size: 16px;
+            }
+            .fa-envelope {
+                position: absolute;
+                top: 50%;
+                left: 1rem;
+                transform: translateY(-50%);
+                color: var(--color-grey-500);
+            }
+        }
+    }
+}
+
 footer {
     font-size: 14px;
     color: var(--color-grey-600);
